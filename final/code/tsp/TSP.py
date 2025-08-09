@@ -46,7 +46,7 @@ class TSP:
         #Get the coordinates of each city and calculate the euclidian distance between the two cities
         for i in range(self.num_cities):
             xi, yi = self.cities[i]
-            for j in range(i+1, self.num_cities):
+            for j in range(i+1, self.num_cities): #only do half of range in our second loop since the matrix is symmetric
                 if i != j:
                     #calculate the Euclidean distance between cities i and j
                     xj, yj = self.cities[j]
